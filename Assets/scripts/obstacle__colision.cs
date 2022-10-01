@@ -8,7 +8,9 @@ public class obstacle__colision : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         this.gameObject.SetActive(false);
-        player__status.lives -= 1;
+        if(player__status.vulnerable){
+            player__status.lives -= 1;
+        }
         Debug.Log("Player live: " + player__status.lives);
     }
 }
