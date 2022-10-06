@@ -27,5 +27,9 @@ public class player__movement : MonoBehaviour{
             transform.Translate(Vector3.up * Time.deltaTime * speed);
         if(Input.GetKey(KeyCode.S) && this.gameObject.transform.position.y > map__limits.down_limit)
             transform.Translate(Vector3.down * Time.deltaTime * speed);
+        if(Input.GetKey(KeyCode.Q) && this.gameObject.transform.position.y > map__limits.down_limit)
+            transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+        if(Input.GetKey(KeyCode.E) && this.gameObject.transform.position.y > map__limits.down_limit)
+            transform.Rotate(Vector3.back * speed * Time.deltaTime);
     }
 }
