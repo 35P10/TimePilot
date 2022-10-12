@@ -7,6 +7,7 @@ public class mainManu__controller : MonoBehaviour
 {
     public void startGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
     }
 
     public void quitGame(){
